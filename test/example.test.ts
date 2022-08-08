@@ -47,7 +47,7 @@ describe('Example test', () => {
         expect(JSON.parse(badObj.body), `AR: ${badObj.body} ER: ${JSON.stringify(newObj)}`).to.eql(newObj)
     })
 
-    it.skip('DELETE', async () => {
+    it('DELETE', async () => {
         const exampleHttpBin = new CrudApiController()
         const models1 = await exampleHttpBin.get()
         const badObj = await exampleHttpBin.delete(models1[0])
